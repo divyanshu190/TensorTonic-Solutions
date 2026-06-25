@@ -7,17 +7,11 @@ def matrix_normalization(matrix, axis=None, norm_type='l2'):
     # Write code here
     # L1
     matrix = np.array(matrix, dtype = float)
-        
     if matrix.ndim != 2:
-    
         return None
-    
     if axis not in (None, 0, 1):
-    
         return None
-    
     if norm_type not in ("l1", "l2", "max"):
-    
         return None
     if norm_type == 'l1':
         if axis is None:
