@@ -17,6 +17,17 @@ def mean_median_mode(x):
     else:
         median = x[mid]
 
-    mode = Counter(x).most_common(1)[0][0]
+    f = {}
+    for i in x:
+        if i in f:
+            f[i] += 1
+        else:
+            f[i] = 1
+    mode = None
+    maxi = 0
+    for num , count in f.items():
+        if count > maxi:
+            maxi = count
+            mode = num
     return mean, median, mode
     pass
